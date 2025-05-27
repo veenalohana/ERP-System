@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP System - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>ERP System</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="products.html"><i class="fas fa-box"></i> Products</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="analytics.html"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </nav>
+        
+        <main class="content">
+            <header>
+                <div class="header-content">
+                    <button id="sidebar-toggle" class="menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="user-info">
+                        <div class="settings">
+                            <a href="settings.html"><i class="fas fa-cog"></i></a>
+                        </div>
+                        <div class="user">
+                            <a href="profile.html">
+                                <img src="my-pic.png" alt="User">
+                            </a>
+                            <span>Veena Lohana</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="dashboard">
+                <div class="welcome-message">
+                    <h1>Welcome to ERP System</h1>
+                    <p>Your business management solution</p>
+                </div>
+                
+                <div class="summary-cards">
+                    <div class="card" id="card1">
+                        <div class="card-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Total Products</h3>
+                            <p class="count">248</p>
+                            <p class="change positive">+12% from last month</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" id="card2">
+                        <div class="card-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Pending Tasks</h3>
+                            <p class="count">15</p>
+                            <p class="change negative">+3 new tasks</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" id="card3">
+                        <div class="card-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Total Revenue</h3>
+                            <p class="count">PKR 24,500</p>
+                            <p class="change positive">+8% from last month</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p>New product added: <strong>Wireless Headphones</strong></p>
+                                <span class="time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p>Product updated: <strong>Smartphone X</strong></p>
+                                <span class="time">5 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p>New user registered: <strong>Anjali Lohana</strong></p>
+                                <span class="time">Yesterday</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

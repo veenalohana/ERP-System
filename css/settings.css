@@ -1,0 +1,267 @@
+.settings-container {
+  padding: 20px;
+}
+
+.settings-header {
+  margin-bottom: 30px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.settings-header h1 {
+  color: blue;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.settings-header p {
+  color: rgb(83, 24, 24)
+}
+
+.settings-content {
+  display: flex;
+  gap: 20px;
+  animation: fadeIn 0.8s ease-in-out 0.2s;
+  animation-fill-mode: both;
+}
+
+.settings-sidebar {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  flex-shrink: 0;
+}
+
+.settings-nav li {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.settings-nav li:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.settings-nav li.active {
+  background-color: #c1edfb;
+  color: #087798;
+  font-weight: 500;
+  border-left: 3px solid #4361ee;
+}
+
+.settings-nav li i {
+  width: 20px;
+  text-align: center;
+}
+
+.settings-panels {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.settings-panel {
+  display: none;
+}
+
+.settings-panel.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.settings-panel h2 {
+  color: #ee0a71;;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-info {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.setting-info h3 {
+  color: blue;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.setting-info p {
+  color: rgb(83, 24, 24);
+  font-size: 14px;
+}
+
+.setting-control {
+  width: 200px;
+  display: flex;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.toggle input:checked + .toggle-slider {
+  background-color: #4361ee;
+}
+
+.toggle input:checked + .toggle-slider:before {
+  transform: translateX(30px);
+}
+
+.toggle-label {
+  font-size: 14px;
+}
+
+
+.color-options {
+  display: flex;
+  gap: 10px;
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border: 2px solid transparent;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+.color-option.active {
+  border-color: #333;
+}
+
+.settings-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #4361ee;
+}
+
+.save-btn {
+  background-color: #4361ee;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.save-btn:hover {
+  background-color: #3a0ca3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1000px) {
+  .settings-content {
+    flex-direction: column;
+  }
+
+  .settings-sidebar {
+    width: 100%;
+  }
+
+  .setting-item {
+    flex-direction: column;
+  }
+
+  .setting-info {
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .setting-control {
+    width: 100%;
+  }
+}

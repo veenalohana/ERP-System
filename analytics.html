@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP System - Analytics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/analytics.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>ERP System</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="products.html"><i class="fas fa-box"></i> Products</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li class="active"><a href="analytics.html"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+           
+        </nav>
+        
+        <main class="content">
+            <header>
+                <div class="header-content">
+                    <button id="sidebar-toggle" class="menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="user-info">
+                        <div class="settings">
+                            <a href="settings.html"><i class="fas fa-cog"></i></a>
+                        </div>
+                        <div class="user">
+                             <a href="profile.html">
+                                <img src="my-pic.png" alt="User">
+                            </a>
+                            <span>Veena Lohana</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="analytics-container">
+                <div class="analytics-header">
+                    <h1>Analytics Dashboard</h1>
+                    <div class="date-filter">
+                        <button class="date-btn active">Today</button>
+                        <button class="date-btn">Week</button>
+                        <button class="date-btn">Month</button>
+                        <button class="date-btn">Year</button>
+                        <button class="date-btn custom">
+                            <i class="fas fa-calendar"></i> Custom
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="analytics-summary">
+                    <div class="summary-card sales">
+                        <div class="card-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Total Sales</h3>
+                            <p class="card-value">PKR 27,500</p>
+                            <p class="card-change positive">+8.5% from last month</p>
+                        </div>
+                        <div class="card-chart">
+                            <div class="chart-bar" style="height: 30%;"></div>
+                            <div class="chart-bar" style="height: 50%;"></div>
+                            <div class="chart-bar" style="height: 40%;"></div>
+                            <div class="chart-bar" style="height: 70%;"></div>
+                            <div class="chart-bar" style="height: 60%;"></div>
+                            <div class="chart-bar" style="height: 80%;"></div>
+                            <div class="chart-bar active" style="height: 90%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card inventory">
+                        <div class="card-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Inventory Changes</h3>
+                            <p class="card-value">+45 items</p>
+                            <p class="card-change positive">+12% from last month</p>
+                        </div>
+                        <div class="card-chart">
+                            <div class="chart-bar" style="height: 40%;"></div>
+                            <div class="chart-bar" style="height: 30%;"></div>
+                            <div class="chart-bar" style="height: 50%;"></div>
+                            <div class="chart-bar" style="height: 45%;"></div>
+                            <div class="chart-bar" style="height: 60%;"></div>
+                            <div class="chart-bar" style="height: 70%;"></div>
+                            <div class="chart-bar active" style="height: 85%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card users">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>User Activity</h3>
+                            <p class="card-value">128 active users</p>
+                            <p class="card-change negative">-3% from last month</p>
+                        </div>
+                        <div class="card-chart">
+                            <div class="chart-bar" style="height: 80%;"></div>
+                            <div class="chart-bar" style="height: 85%;"></div>
+                            <div class="chart-bar" style="height: 90%;"></div>
+                            <div class="chart-bar" style="height: 75%;"></div>
+                            <div class="chart-bar" style="height: 70%;"></div>
+                            <div class="chart-bar" style="height: 65%;"></div>
+                            <div class="chart-bar active" style="height: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analytics-charts">
+                    <div class="chart-card sales-overview">
+                        <div class="chart-header">
+                            <h3>Sales Overview</h3>
+                            <div class="chart-actions">
+                                <button class="chart-action-btn">
+                                    <i class="fa-solid fa-arrow-down"></i>
+                                </button>
+                                <button class="chart-action-btn">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chart-content">
+                            <div class="sales-chart">
+                                <div class="mock-chart">
+                                    <div class="chart-column" style="height: 30%"></div>
+                                    <div class="chart-column" style="height: 45%"></div>
+                                    <div class="chart-column" style="height: 60%"></div>
+                                    <div class="chart-column" style="height: 75%"></div>
+                                    <div class="chart-column" style="height: 50%"></div>
+                                    <div class="chart-column" style="height: 65%"></div>
+                                    <div class="chart-column" style="height: 80%"></div>
+                                </div>
+                                <div class="chart-labels">
+                                    <span>Mon</span>
+                                    <span>Tue</span>
+                                    <span>Wed</span>
+                                    <span>Thu</span>
+                                    <span>Fri</span>
+                                    <span>Sat</span>
+                                    <span>Sun</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-card product-performance">
+                        <div class="chart-header">
+                            <h3>Product Performance</h3>
+                            <div class="chart-actions">
+                                <button class="chart-action-btn">
+                                    <i class="fa-solid fa-arrow-down"></i>
+                                </button>
+                                <button class="chart-action-btn">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chart-content">
+                            <div class="product-chart">
+                                <div class="mock-pie-chart">
+                                    <div class="pie-segment segment-1"></div>
+                                    <div class="pie-segment segment-2"></div>
+                                    <div class="pie-segment segment-3"></div>
+                                </div>
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #3a0ca3;"></span>
+                                        <span class="legend-label">Clothing (30%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #4cc9f0;"></span>
+                                        <span class="legend-label">Accessories (20%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #f72585;"></span>
+                                        <span class="legend-label">Other (50%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analytics-tables">
+                    <div class="table-card top-products">
+                        <div class="table-header">
+                            <h3>Top Products</h3>
+                            <button class="view-all-btn">View All</button>
+                        </div>
+                        <div class="table-content">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Sales</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="product-cell">
+                                                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Headphones">
+                                                <span>Wireless Headphones</span>
+                                            </div>
+                                        </td>
+                                        <td>125 units</td>
+                                        <td>PKR 8,000</td>
+                                        <td><span class="status in-stock">In Stock</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="product-cell">
+                                                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Smart Watch">
+                                                <span>Smart Watch</span>
+                                            </div>
+                                        </td>
+                                        <td>98 units</td>
+                                        <td>PKR 1,200</td>
+                                        <td><span class="status in-stock">In Stock</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="product-cell">
+                                                <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Smartphone">
+                                                <span>Smartphone X</span>
+                                            </div>
+                                        </td>
+                                        <td>76 units</td>
+                                        <td>PKR 20,000</td>
+                                        <td><span class="status in-stock">In Stock</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="product-cell">
+                                                <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Laptop">
+                                                <span>Ultra Slim Laptop</span>
+                                            </div>
+                                        </td>
+                                        <td>45 units</td>
+                                        <td>PKR 45,000</td>
+                                        <td><span class="status out-of-stock">Out of Stock</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/analytics.js"></script>
+</body>
+</html>

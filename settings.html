@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP System - Settings</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>ERP System</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="products.html"><i class="fas fa-box"></i> Products</a></li>
+                <li class="active"><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="analytics.html"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <p>© 2025 ERP System</p>
+            </div>
+        </nav>
+        
+        <main class="content">
+            <header>
+                <div class="header-content">
+                    <button id="sidebar-toggle" class="menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="user-info">
+                         <div class="settings">
+                            <a href="settings.html"><i class="fas fa-cog"></i></a>
+                        </div>
+                        <div class="user">
+                             <a href="profile.html">
+                                <img src="my-pic.png" alt="User">
+                            </a>
+                            <span>Veena Lohana</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="settings-container">
+                <div class="settings-header">
+                    <h1>Settings</h1>
+                    <p>Manage your account settings and preferences</p>
+                </div>
+                
+                <div class="settings-content">
+                    <div class="settings-sidebar">
+                        <ul class="settings-nav">
+                            <li class="active" data-tab="appearance"><i class="fas fa-palette"></i> Appearance</li>
+                            <li data-tab="account"><i class="fas fa-user-cog"></i> Account</li>
+                            <li data-tab="notifications"><i class="fas fa-bell"></i> Notifications</li>
+                            <li data-tab="security"><i class="fas fa-lock"></i> Security</li>
+                            <li data-tab="language"><i class="fas fa-globe"></i> Language</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="settings-panels">
+                        <div class="settings-panel active" id="appearance">
+                            <h2>Appearance</h2>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>Theme Mode</h3>
+                                    <p>Switch between light and dark mode</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle">
+                                        <input type="checkbox" id="theme-toggle">
+                                        <span class="toggle-slider"></span>
+                                        <span class="toggle-label" id="theme-label"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>Color Theme</h3>
+                                    <p>Choose your preferred color theme</p>
+                                </div>
+                                <div class="setting-control">
+                                    <div class="color-options">
+                                        <button class="color-option active" style="background-color: #4361ee;"></button>
+                                        <button class="color-option" style="background-color: #3a0ca3;"></button>
+                                        <button class="color-option" style="background-color: #4cc9f0;"></button>
+                                        <button class="color-option" style="background-color: #f72585;"></button>
+                                        <button class="color-option" style="background-color: #7209b7;"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>Sidebar Position</h3>
+                                    <p>Choose the position of the sidebar</p>
+                                </div>
+                                <div class="setting-control">
+                                    <select>
+                                        <option value="left">Left</option>
+                                        <option value="right">Right</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-panel" id="account">
+                            <h2>Account Settings</h2>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>Profile Information</h3>
+                                    <p>Update your personal information</p>
+                                </div>
+                                <div class="setting-control">
+                                    <form class="settings-form">
+                                        <div class="form-group">
+                                            <label for="name">Full Name</label>
+                                            <input type="text" id="name" value="Veena Lohana">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email Address</label>
+                                            <input type="email" id="email" value="lohanaveena38@gmail.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number</label>
+                                            <input type="tel" id="phone" value="03356897654">
+                                        </div>
+                                        <button type="button" class="save-btn">Save Changes</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-panel" id="notifications">
+                            <h2>Notification Settings</h2>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>Email Notifications</h3>
+                                    <p>Receive email notifications for important updates</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>Product Updates</h3>
+                                    <p>Get notified when products are updated</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>Security Alerts</h3>
+                                    <p>Receive notifications about security issues</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-panel" id="security">
+                            <h2>Security Settings</h2>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>Change Password</h3>
+                                    <p>Update your password regularly for better security</p>
+                                </div>
+                                <div class="setting-control">
+                                    <form class="settings-form">
+                                        <div class="form-group">
+                                            <label for="current-password">Current Password</label>
+                                            <input type="password" id="current-password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="new-password">New Password</label>
+                                            <input type="password" id="new-password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="confirm-password">Confirm New Password</label>
+                                            <input type="password" id="confirm-password">
+                                        </div>
+                                        <button type="button" class="save-btn">Update Password</button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>Two-Factor Authentication</h3>
+                                    <p>Add an extra layer of security to your account</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle">
+                                        <input type="checkbox">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-panel" id="language">
+                            <h2>Language Settings</h2>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>Display Language</h3>
+                                    <p>Select your preferred language</p>
+                                </div>
+                                <div class="setting-control">
+                                    <select>
+                                        <option value="en">English</option>
+                                        <option value="ur">Urdu</option>
+                                        <option value="fr">Français</option>
+                                        <option value="si">Sindhi</option>
+                                        <option value="zh">中文</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>Date Format</h3>
+                                    <p>Choose how dates are displayed</p>
+                                </div>
+                                <div class="setting-control">
+                                    <select>
+                                        <option value="mdy">MM/DD/YYYY</option>
+                                        <option value="dmy">DD/MM/YYYY</option>
+                                        <option value="ymd">YYYY/MM/DD</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3>Time Format</h3>
+                                    <p>Choose how time is displayed</p>
+                                </div>
+                                <div class="setting-control">
+                                    <select>
+                                        <option value="12">12-hour (AM/PM)</option>
+                                        <option value="24">24-hour</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>
